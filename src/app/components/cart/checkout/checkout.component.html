@@ -1,0 +1,60 @@
+<div  class="container mt-4" id="incart" *ngIf="filling">
+  <div *ngIf="cart">
+    <h4>בעגלה שלכם:</h4>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let product of cart">
+        {{product.name}} ({{product.quantity}})
+      </li>
+    </ul>
+    <h4>סך הכל: {{order.total}}</h4>
+    <button class="btn btn-secondary" (click)="backToShop()">להמשיך קניות</button>
+  </div>
+  <br><br>
+  <div class="container mt-4" id="checkoutform">
+    <form novalidate (ngSubmit)="finishShopping()" #f="ngForm">
+      <legend>בבקשו מלאו פרטיכם</legend>
+      
+      <div class="form-group">
+        <label>שם</label>
+        <input type="text" class="form-control" name="name" [(ngModel)]="order.name" required #name="ngModel"
+          [ngClass]="{'is-invalid': name.invalid && name.touched}">
+        <div *ngIf="name.invalid && name.touched" class="invalid-feedback">
+          שדה השם לא יכול להיות ריק
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>דוא"ל</label>
+        <input type="email" class="form-control" name="email" [(ngModel)]="order.email" required #email="ngModel"
+          [ngClass]="{'is-invalid': email.invalid && email.touched}">
+        <div *ngIf="email.invalid && email.touched" class="invalid-feedback">
+          נא למלא כתובת דוא"ל תקינה
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>כתובת</label>
+        <input type="text" class="form-control" name="address" [(ngModel)]="order.address" #address="ngModel">
+      </div>
+
+      <div class="form-group">
+        <label>מספר טלפון</label>
+        <input type="text" class="form-control" name="phone" [(ngModel)]="order.phone"
+          required #phone="ngModel" [ngClass]="{'is-invalid': phone.invalid && phone.touched}">
+        <div *ngIf="phone.invalid && phone.touched" class="invalid-feedback">
+            נא להזין מספר טלפון כדי שנוכל ליצור איתכם קשר
+        </div>
+      </div>
+
+      <div>
+        <button type="submit" [disabled]="f.invalid || submitted" class="btn btn-success btn-outline-rounded btn-info">
+          לסיים קניות
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<div id="done" *ngIf="finished" class="container mt-4">
+  תודה שקניתם! ההזמנה תמתין לכם בחנות.
+  <button class="btn btn-primary" (click)="backToShop()">טוב</button>
+</div>

@@ -1,0 +1,16 @@
+<div *ngIf="products" class="row card-group">
+  <div class="col-4" *ngFor="let product of products">
+    <div class="card m-3">
+      <img class="card-img-top" src="{{product.img}}" alt="משקה">
+      <div class="card-body">
+        <h5 class="card-header">{{product.name}}</h5>
+        <p class="card-title">{{product.price}}</p>
+        <div>
+          <label>כמות: </label>
+          <input type="number" [(ngModel)]="product.quantity"></div>
+        <button (click)="addToCart(product)" class="btn btn-primary">להוסיף לסל
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

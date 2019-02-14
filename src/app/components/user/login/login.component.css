@@ -1,0 +1,11 @@
+#loginform {
+    width: 40%;
+    align-self: center;
+    background-color: rgb(255,255,255,0.6);
+    padding: 10px;
+}
+
+#header {
+    width: 100%;
+    text-align: center;
+}

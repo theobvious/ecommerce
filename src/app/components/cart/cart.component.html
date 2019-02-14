@@ -1,0 +1,23 @@
+<div id="cart" class="container mt-4">
+    <div>
+        <h4>חיפוש בעגלה:</h4>
+        <label>הכניסו שם מוצר או חלק ממנו:</label>
+        <input [(ngModel)]="searchstring" (keyup)="filterList()">
+    </div>
+    <br>
+    <h3>בעגלה שלכם:</h3>
+    <div>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let product of cart">
+                {{product.name}} ({{product.quantity}}) <button class="btn btn-info" (click)="removeFromCart(product)"><fa name="minus-square"></fa></button>
+            </li>
+        </ul>
+    </div>
+    <div>סך הכל לתשלום: {{total}}</div>
+    <div>
+        <br>
+        <br>
+        <button class="btn btn-secondary" (click)=goShop()>להמשיך קניות</button>
+        <button class="btn btn-secondary" (click)=checkOut()>לשלוח הזמנה</button>
+    </div>
+</div>

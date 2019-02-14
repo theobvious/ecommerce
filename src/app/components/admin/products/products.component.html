@@ -1,0 +1,22 @@
+<div id="header">
+    <a [routerLink]="['admin']">חזרה לניהול הזמנות</a>.
+  <h3> .ברוכים הבאים. כאן תנהלו את המלאי וההזמנות. על מנת לערוך מוצר יש ללחוץ על שמו
+    <br>
+   <a [routerLink]="['addproduct']">הוספת מוצר חדש</a>.</h3>
+</div>
+<div class="container">
+  <div class="row">
+      <div id="list" class="col-4">
+          <div *ngIf="products">
+              <ul class="list-group">
+                <li class="list-group-item" *ngFor="let product of products">
+                    <a [routerLink]="['editproduct/' + product.id]"> {{product.name}} </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <div id="edit" class="col-8">
+        <router-outlet></router-outlet>
+      </div>
+  </div>

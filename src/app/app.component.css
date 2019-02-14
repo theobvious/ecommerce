@@ -1,0 +1,17 @@
+.navigation {
+    background-color: #f2f5f9;
+    opacity: 70%;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center; 
+}
+
+.right-block {
+    margin-left: auto;
+}
+
+.nav-item {
+    margin: 5px;
+}

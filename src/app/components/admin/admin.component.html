@@ -1,0 +1,12 @@
+<div class="m-3" id="header">
+  <h1>ניהול החנות</h1>
+<a [routerLink]="['/products']">לניהול מוצרים</a> 
+  <h2>הזמנות</h2>
+  <ul *ngIf="orders">
+    <li *ngFor="let order of orders"> {{order.name}}<br>
+      {{order.products}}<br>
+      טלפון ליצירת קשר: {{order.phone}}<br>
+    </li>
+  </ul>
+</div>
+

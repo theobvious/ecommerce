@@ -1,0 +1,46 @@
+
+<div class="container mt-4" id="header">
+    <h3> כנסו לאיזור המנהלים או
+       <a [routerLink]="['/register']">הירשמו</a>.</h3>
+</div>
+
+<div class="container mt-4" id="loginform">
+  <form novalidate (ngSubmit)="logIn()" #f="ngForm">
+    <div class="form-group">
+        <label>שם משתמש</label>
+        <input type="text"
+          class="form-control"
+          name="username"
+          [(ngModel)]="usernameModel"
+          required
+          #username="ngModel"     
+      [ngClass]="{'is-invalid': username.invalid && (username.dirty || username.touched)}">
+        <div class="invalid-feedback"
+          *ngIf="username.errors && (username.dirty || username.touched)">
+          <p *ngIf="username.errors.required">חובה להזין שם משתמש</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>ססמא</label>
+        <input type="password"
+        class="form-control"
+        name="password"
+        [(ngModel)]="passwordModel"
+        required
+        #password="ngModel"
+      [ngClass]="{'is-invalid': password.invalid && (password.dirty || password.touched)}">
+        <div class="invalid-feedback"
+          *ngIf="password.errors && (password.dirty || password.touched)">
+          <p *ngIf="password.errors.required">חובה להזין ססמא</p>
+        </div>
+    </div>
+    <button type="submit"
+      class="btn btn-primary"
+      [disabled]="f.invalid">
+    Submit
+    </button>
+    </form>
+  <br/>
+  <div id="notification" [ngClass]="{'alert alert-danger': message}">{{message}}</div>
+</div>

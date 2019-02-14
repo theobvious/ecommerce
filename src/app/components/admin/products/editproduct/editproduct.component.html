@@ -1,0 +1,25 @@
+<div *ngIf="product">
+    <h2>{{product.name}}</h2>
+    <div>
+      <label>שם:
+        <input [(ngModel)]="product.name" placeholder="name"/>
+      </label>
+      </div>
+      <div>
+      <label>מחיר:
+        <input [(ngModel)]="product.price" placeholder="price"/>
+      </label>
+      </div>
+      <div>
+        ניתן להוסיף קישור לתמונה חדשה.
+      <label>תמונה:
+        <input [(ngModel)]="product.img" placeholder="image link"/>
+      </label>
+      </div>
+      <div>
+        <img src="{{product.img}}" class="preview">
+      </div>
+      <div>
+        <button type="button" class="btn btn-primary" (click)="editProduct(product)">שמירת שינויים</button>
+      </div>
+  </div>

@@ -1,0 +1,9 @@
+<div class="m-3" id="header">
+    <h1>ברוכים הבאים לחנות. אנא, בחרו קטגוריית מוצרים</h1>
+    <ul *ngIf="categories">
+      <li *ngFor="let category of categories"><a [routerLink]="['category/'+category.category]"> {{category.category}} </a></li>
+    </ul>
+</div>
+<div class='row'>
+  <router-outlet></router-outlet>
+</div>

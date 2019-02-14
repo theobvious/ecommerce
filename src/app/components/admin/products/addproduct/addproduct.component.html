@@ -1,0 +1,43 @@
+<div id="addform">
+  <h3>הוספת מוצר חדש</h3>
+  <form novalidate (ngSubmit)="onSubmit()" #f="ngForm" encType="multipart/form-data">
+    <div class="form-group">
+      <label>שם </label>
+      <input type="text" class="form-control" name="name" [(ngModel)]="newProduct.name" required #name="ngModel" [ngClass]="{'is-invalid': name.invalid && (name.dirty || name.touched)}">
+      <div *ngIf="name.invalid && name.touched" class="invalid-feedback">
+        מהו שם המוצר?
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>מחיר </label>
+      <input type="number" class="form-control" name="price" [(ngModel)]="newProduct.price" required #price="ngModel"
+        [ngClass]="{'is-invalid': price.invalid && price.touched}">
+      <div *ngIf="price.invalid && price.touched" class="invalid-feedback">
+        חובה למלא שדה זה
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>הוספת תמונה </label>
+      <input type="file" name="newimg" #newimg (change)="newFile($event.target.files)"/>
+    </div>
+
+    <div class="form-group">
+      <label>קטגוריה </label>
+      <select class="form-control" name="category" [(ngModel)]="newProduct.category">
+        <option value="" selected disabled hidden>בחירת קטגוריה</option>
+        <option *ngFor="let cat of categories">
+          {{cat.category}}
+        </option>
+      </select>
+    </div>
+
+    <div>
+      <button type="submit" [disabled]="f.invalid" class="btn btn-primary">
+        להוסיף מוצר
+      </button>
+    </div>
+  </form>
+  <div>{{message}}</div>
+</div>
