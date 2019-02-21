@@ -67,6 +67,17 @@ app.get('/getcategories', (req, res) => {
   })
 })
 
+app.get('/getorders', (req, res) => {
+  con.query(`select * from orders`, (err, data) => {
+    if (err) {
+      console.log(err);
+      res.status(400).send(err);
+    } else {
+      res.send(data);
+    }
+  })
+})
+
 app.post('/getproducts', (req, res) => {
   con.query(`select * from products where category="${req.body.category}"`, (err, data) => {
     if (err) {

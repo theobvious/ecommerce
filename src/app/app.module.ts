@@ -11,6 +11,7 @@ import { AuthGuard } from './services/auth-guard.service';
 import { DataService } from './services/data.service';
 import { UserService } from './services/user.service';
 import { CartService } from './services/cart.service';
+import { OrderService } from './services/order.service';
 import { DateFormatPipe } from './dateFormat.pipe';
 
 import { AppComponent } from './app.component';
@@ -93,7 +94,7 @@ export class MyRouteReuseStrategy implements RouteReuseStrategy {
     ReactiveFormsModule,
     AngularFontAwesomeModule
   ],
-  providers: [DataService, CartService, UserService, AuthGuard, DateFormatPipe, 
+  providers: [DataService, CartService, UserService, OrderService, AuthGuard, DateFormatPipe, 
     {provide: APP_BASE_HREF, useValue : '/' },
     {provide: RouteReuseStrategy, useClass: MyRouteReuseStrategy}
   ],

@@ -1,4 +1,4 @@
-import { DataService } from './../../services/data.service';
+import { OrderService } from './../../services/order.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-  orders: any;
+  orders: any = [];
   
-  constructor(private getdata: DataService) { }
+  constructor(private getdata: OrderService) { }
 
   ngOnInit() {
     this.getorders();
@@ -18,7 +18,9 @@ export class AdminComponent implements OnInit {
   getorders() {
     this.getdata.getOrders()
       .subscribe (res => {
-        this.orders = res.json();
+        this.orders = res;
+        this.orders = Array.of(this.orders);
+        console.log(this.orders);
       });
   }
 
