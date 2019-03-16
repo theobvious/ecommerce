@@ -32,7 +32,7 @@ export class AddProductComponent implements OnInit {
  
 onSubmit() {
     this.message = '';
-    this.getdata.upload(this.fileToUpload)
+      this.getdata.upload(this.fileToUpload)
       .subscribe(res=>{
         this.newProduct.img = res.json();
         this.sendInfo();
@@ -42,7 +42,7 @@ onSubmit() {
   sendInfo() {
     this.getdata.sendProduct(this.newProduct)
     .subscribe(res=> {
-      this.message = "Added successfully!";
+      this.message = "נוסף בהצלחה!";
       this.form.reset();
     });
   }

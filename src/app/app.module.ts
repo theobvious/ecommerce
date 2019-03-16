@@ -16,7 +16,6 @@ import { DateFormatPipe } from './dateFormat.pipe';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/user/login/login.component';
-import { RegisterComponent } from './components/user/register/register.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { ProductsComponent } from './components/admin/products/products.component';
 import { AddProductComponent } from './components/admin/products/addproduct/addproduct.component';
@@ -37,7 +36,6 @@ const routes: Routes = [
         {path: 'addproduct', component: AddProductComponent}
       ]
   },
-  {path: 'register', component: RegisterComponent},
   {path: 'cart', component: CartComponent},
   {path: 'checkout', component: CheckoutComponent},
   {
@@ -76,7 +74,6 @@ export class MyRouteReuseStrategy implements RouteReuseStrategy {
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent,
     AdminComponent,
     ShopComponent,
     CategoryComponent,

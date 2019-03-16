@@ -1,25 +1,26 @@
-<div *ngIf="product">
+<form novalidate (ngSubmit)="onSubmit()" #f="ngForm" encType="multipart/form-data">
+  <div class="form-group" *ngIf="product">
     <h2>{{product.name}}</h2>
     <div>
       <label>שם:
-        <input [(ngModel)]="product.name" placeholder="name"/>
+        <input [(ngModel)]="product.name" placeholder="product.name"/>
       </label>
       </div>
       <div>
       <label>מחיר:
-        <input [(ngModel)]="product.price" placeholder="price"/>
+        <input [(ngModel)]="product.price" placeholder="product.price"/>
       </label>
       </div>
-      <div>
-        ניתן להוסיף קישור לתמונה חדשה.
-      <label>תמונה:
-        <input [(ngModel)]="product.img" placeholder="image link"/>
-      </label>
+      <div class="form-group">
+        <label>הוספת תמונה </label>
+        <input type="file" name="newimg" #newimg (change)="newFile($event.target.files)"/>
       </div>
+
       <div>
         <img src="{{product.img}}" class="preview">
       </div>
       <div>
-        <button type="button" class="btn btn-primary" (click)="editProduct(product)">שמירת שינויים</button>
+        <button type="submit" class="btn btn-primary">שמירת שינויים</button>
       </div>
+      {{message}}
   </div>

@@ -12,7 +12,6 @@ constructor(private http: Http) { }
  loggedInUser: User;
  username:any = new Subject();
  isLoggedIn = new Subject<boolean>();
-// isAdmin:boolean = false;
 
  set name(value) {
    this.username.next(value);
@@ -35,21 +34,12 @@ sendUser(userData): Observable<any> {
   return this.http.post('/user', userData);
 }
 
-checkUser(tz): Observable<any> {
-  return this.http.post('/checkexist', tz);
-}
-
-registerUser(userData): Observable<any>{
-  return this.http.post('/newuser', userData);
-}
-
 getUsers(): Observable<any> {
   return this.http.get('/users');
 }
 
 logOut(): Observable<any> {
   this.isLoggedIn.next(false);
- // this.isAdmin = false;
   this.loggedInUser = null;
   sessionStorage.clear();
   

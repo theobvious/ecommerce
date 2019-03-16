@@ -151,28 +151,6 @@ app.post('/user', (req, res) => {
   });
 });
 
-app.post('/checkexist', (req, res) => {
-  con.query(`select * from users where tz=${req.body.tz}`, (err, rows) => {
-    if (err)
-      console.log(err);
-    else if (rows.length > 0) {
-      res.send("1");
-    } else if (rows.length < 1) {
-      res.send("2");
-    }
-  })
-})
-
-app.post('/newuser', (req, res) => {
-  con.query(`insert into users (username, password, email, tz, name, city, street, role) 
-    values 
-    ("${req.body.username}", "${req.body.password}", "${req.body.email}", ${req.body.tz}, "${req.body.name}", "${req.body.city}", "${req.body.street}", "${req.body.role}")`, (err) => {
-    if (err)
-      console.log(err);
-    else res.send();
-  })
-})
-
 app.post('/closecart', (req, res) => {
       con.query(`update carts set products='' where cartId="${req.session.id}"`, (err) => {
         if (err)

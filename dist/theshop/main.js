@@ -140,15 +140,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dateFormat_pipe__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./dateFormat.pipe */ "./src/app/dateFormat.pipe.ts");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _components_user_login_login_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/user/login/login.component */ "./src/app/components/user/login/login.component.ts");
-/* harmony import */ var _components_user_register_register_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/user/register/register.component */ "./src/app/components/user/register/register.component.ts");
-/* harmony import */ var _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/admin/admin.component */ "./src/app/components/admin/admin.component.ts");
-/* harmony import */ var _components_admin_products_products_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/admin/products/products.component */ "./src/app/components/admin/products/products.component.ts");
-/* harmony import */ var _components_admin_products_addproduct_addproduct_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/admin/products/addproduct/addproduct.component */ "./src/app/components/admin/products/addproduct/addproduct.component.ts");
-/* harmony import */ var _components_admin_products_editproduct_editproduct_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/admin/products/editproduct/editproduct.component */ "./src/app/components/admin/products/editproduct/editproduct.component.ts");
-/* harmony import */ var _components_shop_shop_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/shop/shop.component */ "./src/app/components/shop/shop.component.ts");
-/* harmony import */ var _components_shop_category_category_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/shop/category/category.component */ "./src/app/components/shop/category/category.component.ts");
-/* harmony import */ var _components_cart_cart_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/cart/cart.component */ "./src/app/components/cart/cart.component.ts");
-/* harmony import */ var _components_cart_checkout_checkout_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/cart/checkout/checkout.component */ "./src/app/components/cart/checkout/checkout.component.ts");
+/* harmony import */ var _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/admin/admin.component */ "./src/app/components/admin/admin.component.ts");
+/* harmony import */ var _components_admin_products_products_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/admin/products/products.component */ "./src/app/components/admin/products/products.component.ts");
+/* harmony import */ var _components_admin_products_addproduct_addproduct_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/admin/products/addproduct/addproduct.component */ "./src/app/components/admin/products/addproduct/addproduct.component.ts");
+/* harmony import */ var _components_admin_products_editproduct_editproduct_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/admin/products/editproduct/editproduct.component */ "./src/app/components/admin/products/editproduct/editproduct.component.ts");
+/* harmony import */ var _components_shop_shop_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/shop/shop.component */ "./src/app/components/shop/shop.component.ts");
+/* harmony import */ var _components_shop_category_category_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/shop/category/category.component */ "./src/app/components/shop/category/category.component.ts");
+/* harmony import */ var _components_cart_cart_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/cart/cart.component */ "./src/app/components/cart/cart.component.ts");
+/* harmony import */ var _components_cart_checkout_checkout_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/cart/checkout/checkout.component */ "./src/app/components/cart/checkout/checkout.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -179,26 +178,24 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
 var routes = [
     { path: '', redirectTo: 'shop', pathMatch: 'full' },
     { path: 'find', redirectTo: 'search' },
     { path: 'login', component: _components_user_login_login_component__WEBPACK_IMPORTED_MODULE_14__["LoginComponent"] },
-    { path: 'admin', component: _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_16__["AdminComponent"], canActivate: [_services_auth_guard_service__WEBPACK_IMPORTED_MODULE_7__["AuthGuard"]] },
-    { path: 'products', component: _components_admin_products_products_component__WEBPACK_IMPORTED_MODULE_17__["ProductsComponent"],
+    { path: 'admin', component: _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_15__["AdminComponent"], canActivate: [_services_auth_guard_service__WEBPACK_IMPORTED_MODULE_7__["AuthGuard"]] },
+    { path: 'products', component: _components_admin_products_products_component__WEBPACK_IMPORTED_MODULE_16__["ProductsComponent"],
         children: [
-            { path: 'editproduct/:id', component: _components_admin_products_editproduct_editproduct_component__WEBPACK_IMPORTED_MODULE_19__["EditProductComponent"] },
-            { path: 'addproduct', component: _components_admin_products_addproduct_addproduct_component__WEBPACK_IMPORTED_MODULE_18__["AddProductComponent"] }
+            { path: 'editproduct/:id', component: _components_admin_products_editproduct_editproduct_component__WEBPACK_IMPORTED_MODULE_18__["EditProductComponent"] },
+            { path: 'addproduct', component: _components_admin_products_addproduct_addproduct_component__WEBPACK_IMPORTED_MODULE_17__["AddProductComponent"] }
         ]
     },
-    { path: 'register', component: _components_user_register_register_component__WEBPACK_IMPORTED_MODULE_15__["RegisterComponent"] },
-    { path: 'cart', component: _components_cart_cart_component__WEBPACK_IMPORTED_MODULE_22__["CartComponent"] },
-    { path: 'checkout', component: _components_cart_checkout_checkout_component__WEBPACK_IMPORTED_MODULE_23__["CheckoutComponent"] },
+    { path: 'cart', component: _components_cart_cart_component__WEBPACK_IMPORTED_MODULE_21__["CartComponent"] },
+    { path: 'checkout', component: _components_cart_checkout_checkout_component__WEBPACK_IMPORTED_MODULE_22__["CheckoutComponent"] },
     {
         path: 'shop',
-        component: _components_shop_shop_component__WEBPACK_IMPORTED_MODULE_20__["ShopComponent"],
+        component: _components_shop_shop_component__WEBPACK_IMPORTED_MODULE_19__["ShopComponent"],
         children: [
-            { path: 'category/:category', component: _components_shop_category_category_component__WEBPACK_IMPORTED_MODULE_21__["CategoryComponent"] }
+            { path: 'category/:category', component: _components_shop_category_category_component__WEBPACK_IMPORTED_MODULE_20__["CategoryComponent"] }
         ]
     },
 ];
@@ -231,15 +228,14 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_13__["AppComponent"],
                 _components_user_login_login_component__WEBPACK_IMPORTED_MODULE_14__["LoginComponent"],
-                _components_user_register_register_component__WEBPACK_IMPORTED_MODULE_15__["RegisterComponent"],
-                _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_16__["AdminComponent"],
-                _components_shop_shop_component__WEBPACK_IMPORTED_MODULE_20__["ShopComponent"],
-                _components_shop_category_category_component__WEBPACK_IMPORTED_MODULE_21__["CategoryComponent"],
-                _components_cart_cart_component__WEBPACK_IMPORTED_MODULE_22__["CartComponent"],
-                _components_admin_products_products_component__WEBPACK_IMPORTED_MODULE_17__["ProductsComponent"],
-                _components_admin_products_addproduct_addproduct_component__WEBPACK_IMPORTED_MODULE_18__["AddProductComponent"],
-                _components_admin_products_editproduct_editproduct_component__WEBPACK_IMPORTED_MODULE_19__["EditProductComponent"],
-                _components_cart_checkout_checkout_component__WEBPACK_IMPORTED_MODULE_23__["CheckoutComponent"]
+                _components_admin_admin_component__WEBPACK_IMPORTED_MODULE_15__["AdminComponent"],
+                _components_shop_shop_component__WEBPACK_IMPORTED_MODULE_19__["ShopComponent"],
+                _components_shop_category_category_component__WEBPACK_IMPORTED_MODULE_20__["CategoryComponent"],
+                _components_cart_cart_component__WEBPACK_IMPORTED_MODULE_21__["CartComponent"],
+                _components_admin_products_products_component__WEBPACK_IMPORTED_MODULE_16__["ProductsComponent"],
+                _components_admin_products_addproduct_addproduct_component__WEBPACK_IMPORTED_MODULE_17__["AddProductComponent"],
+                _components_admin_products_editproduct_editproduct_component__WEBPACK_IMPORTED_MODULE_18__["EditProductComponent"],
+                _components_cart_checkout_checkout_component__WEBPACK_IMPORTED_MODULE_22__["CheckoutComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -297,6 +293,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminComponent", function() { return AdminComponent; });
 /* harmony import */ var _services_order_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../services/order.service */ "./src/app/services/order.service.ts");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs_add_operator_map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/add/operator/map */ "./node_modules/rxjs-compat/_esm5/add/operator/map.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -306,6 +303,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 var AdminComponent = /** @class */ (function () {
@@ -319,10 +317,10 @@ var AdminComponent = /** @class */ (function () {
     AdminComponent.prototype.getorders = function () {
         var _this = this;
         this.getdata.getOrders()
-            .subscribe(function (res) {
-            _this.orders = res;
-            _this.orders = Array.of(_this.orders);
-            console.log(_this.orders);
+            .subscribe(function (data) {
+            if (data.json) {
+                _this.orders = data.json();
+            }
         });
     };
     AdminComponent = __decorate([
@@ -418,7 +416,7 @@ var AddProductComponent = /** @class */ (function () {
         var _this = this;
         this.getdata.sendProduct(this.newProduct)
             .subscribe(function (res) {
-            _this.message = "Added successfully!";
+            _this.message = "נוסף בהצלחה!";
             _this.form.reset();
         });
     };
@@ -463,7 +461,7 @@ module.exports = ".preview {\r\n    height: 200px;\r\n}"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"product\">\n    <h2>{{product.name}}</h2>\n    <div>\n      <label>שם:\n        <input [(ngModel)]=\"product.name\" placeholder=\"name\"/>\n      </label>\n      </div>\n      <div>\n      <label>מחיר:\n        <input [(ngModel)]=\"product.price\" placeholder=\"price\"/>\n      </label>\n      </div>\n      <div>\n        ניתן להוסיף קישור לתמונה חדשה.\n      <label>תמונה:\n        <input [(ngModel)]=\"product.img\" placeholder=\"image link\"/>\n      </label>\n      </div>\n      <div>\n        <img src=\"{{product.img}}\" class=\"preview\">\n      </div>\n      <div>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"editProduct(product)\">שמירת שינויים</button>\n      </div>\n  </div>"
+module.exports = "<form novalidate (ngSubmit)=\"onSubmit()\" #f=\"ngForm\" encType=\"multipart/form-data\">\n  <div class=\"form-group\" *ngIf=\"product\">\n    <h2>{{product.name}}</h2>\n    <div>\n      <label>שם:\n        <input [(ngModel)]=\"product.name\" placeholder=\"product.name\"/>\n      </label>\n      </div>\n      <div>\n      <label>מחיר:\n        <input [(ngModel)]=\"product.price\" placeholder=\"product.price\"/>\n      </label>\n      </div>\n      <div class=\"form-group\">\n        <label>הוספת תמונה </label>\n        <input type=\"file\" name=\"newimg\" #newimg (change)=\"newFile($event.target.files)\"/>\n      </div>\n\n      <div>\n        <img src=\"{{product.img}}\" class=\"preview\">\n      </div>\n      <div>\n        <button type=\"submit\" class=\"btn btn-primary\">שמירת שינויים</button>\n      </div>\n      {{message}}\n  </div>"
 
 /***/ }),
 
@@ -512,10 +510,22 @@ var EditProductComponent = /** @class */ (function () {
             _this.product = res.json();
         });
     };
-    EditProductComponent.prototype.editProduct = function (product) {
-        this.getdata.editProduct(product)
+    EditProductComponent.prototype.newFile = function (files) {
+        this.fileToUpload = files.item(0);
+    };
+    EditProductComponent.prototype.onSubmit = function () {
+        var _this = this;
+        this.getdata.upload(this.fileToUpload)
             .subscribe(function (res) {
-            console.log('OK');
+            _this.product.img = res.json();
+            _this.editProduct();
+        });
+    };
+    EditProductComponent.prototype.editProduct = function () {
+        var _this = this;
+        this.getdata.editProduct(this.product)
+            .subscribe(function (res) {
+            _this.message = "נערך בהצלחה!";
         });
     };
     ;
@@ -523,6 +533,14 @@ var EditProductComponent = /** @class */ (function () {
         this.router.navigated = false;
         this.router.navigate(["/", this.id]);
     };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('f'),
+        __metadata("design:type", Object)
+    ], EditProductComponent.prototype, "form", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('newimg'),
+        __metadata("design:type", Object)
+    ], EditProductComponent.prototype, "file", void 0);
     EditProductComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-editproduct',
@@ -829,7 +847,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"products\" class=\"row card-group\">\n  <div class=\"col-4\" *ngFor=\"let product of products\">\n    <div class=\"card m-3\">\n      <img class=\"card-img-top\" src=\"{{product.img}}\" alt=\"משקה\">\n      <div class=\"card-body\">\n        <h5 class=\"card-header\">{{product.name}}</h5>\n        <p class=\"card-title\">{{product.price}}</p>\n        <div>\n          <label>כמות: </label>\n          <input type=\"number\" [(ngModel)]=\"product.quantity\"></div>\n        <button (click)=\"addToCart(product)\" class=\"btn btn-primary\">להוסיף לסל\n        </button>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div *ngIf=\"products\" class=\"row card-group\">\n  <div class=\"col-4\" *ngFor=\"let product of products\">\n    <div class=\"card m-3\">\n      <img class=\"card-img-top\" src=\"{{product.img}}\" alt=\"משקה\">\n      <div class=\"card-body\">\n        <h5 class=\"card-header\">{{product.name}}</h5>\n        <p class=\"card-title\">{{product.price}}</p>\n        <div>\n          <label>כמות: </label>\n          <input type=\"number\" [(ngModel)]=\"product.quantity\"></div>\n        <button (click)=\"checkQuantity(product)\" class=\"btn btn-primary\">להוסיף לסל\n        </button>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -883,8 +901,16 @@ var CategoryComponent = /** @class */ (function () {
             _this.products = res.json();
         });
     };
+    CategoryComponent.prototype.checkQuantity = function (product) {
+        if (product.quantity >= 1) {
+            this.addToCart(product);
+        }
+        else
+            alert("יש לבחור כמות");
+    };
     CategoryComponent.prototype.addToCart = function (product) {
         this.cartService.addProduct(product);
+        alert("נוסף בהצלחה!");
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
@@ -997,7 +1023,7 @@ module.exports = "#loginform {\r\n    width: 40%;\r\n    -ms-grid-row-align: cen
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"container mt-4\" id=\"header\">\n    <h3> כנסו לאיזור המנהלים או\n       <a [routerLink]=\"['/register']\">הירשמו</a>.</h3>\n</div>\n\n<div class=\"container mt-4\" id=\"loginform\">\n  <form novalidate (ngSubmit)=\"logIn()\" #f=\"ngForm\">\n    <div class=\"form-group\">\n        <label>שם משתמש</label>\n        <input type=\"text\"\n          class=\"form-control\"\n          name=\"username\"\n          [(ngModel)]=\"usernameModel\"\n          required\n          #username=\"ngModel\"     \n      [ngClass]=\"{'is-invalid': username.invalid && (username.dirty || username.touched)}\">\n        <div class=\"invalid-feedback\"\n          *ngIf=\"username.errors && (username.dirty || username.touched)\">\n          <p *ngIf=\"username.errors.required\">חובה להזין שם משתמש</p>\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <label>ססמא</label>\n        <input type=\"password\"\n        class=\"form-control\"\n        name=\"password\"\n        [(ngModel)]=\"passwordModel\"\n        required\n        #password=\"ngModel\"\n      [ngClass]=\"{'is-invalid': password.invalid && (password.dirty || password.touched)}\">\n        <div class=\"invalid-feedback\"\n          *ngIf=\"password.errors && (password.dirty || password.touched)\">\n          <p *ngIf=\"password.errors.required\">חובה להזין ססמא</p>\n        </div>\n    </div>\n    <button type=\"submit\"\n      class=\"btn btn-primary\"\n      [disabled]=\"f.invalid\">\n    Submit\n    </button>\n    </form>\n  <br/>\n  <div id=\"notification\" [ngClass]=\"{'alert alert-danger': message}\">{{message}}</div>\n</div>\n"
+module.exports = "\n<div class=\"container mt-4\" id=\"header\">\n    <h3> כנסו לאיזור המנהלים\n    </h3>\n</div>\n\n<div class=\"container mt-4\" id=\"loginform\">\n  <form novalidate (ngSubmit)=\"logIn()\" #f=\"ngForm\">\n    <div class=\"form-group\">\n        <label>שם משתמש</label>\n        <input type=\"text\"\n          class=\"form-control\"\n          name=\"username\"\n          [(ngModel)]=\"usernameModel\"\n          required\n          #username=\"ngModel\"     \n      [ngClass]=\"{'is-invalid': username.invalid && (username.dirty || username.touched)}\">\n        <div class=\"invalid-feedback\"\n          *ngIf=\"username.errors && (username.dirty || username.touched)\">\n          <p *ngIf=\"username.errors.required\">חובה להזין שם משתמש</p>\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <label>ססמא</label>\n        <input type=\"password\"\n        class=\"form-control\"\n        name=\"password\"\n        [(ngModel)]=\"passwordModel\"\n        required\n        #password=\"ngModel\"\n      [ngClass]=\"{'is-invalid': password.invalid && (password.dirty || password.touched)}\">\n        <div class=\"invalid-feedback\"\n          *ngIf=\"password.errors && (password.dirty || password.touched)\">\n          <p *ngIf=\"password.errors.required\">חובה להזין ססמא</p>\n        </div>\n    </div>\n    <button type=\"submit\"\n      class=\"btn btn-primary\"\n      [disabled]=\"f.invalid\">\n    Submit\n    </button>\n    </form>\n  <br/>\n  <div id=\"notification\" [ngClass]=\"{'alert alert-danger': message}\">{{message}}</div>\n</div>\n"
 
 /***/ }),
 
@@ -1058,13 +1084,7 @@ var LoginComponent = /** @class */ (function () {
             _this.userservice.name = _this.user.name;
             _this.userservice.isLoggedIn.next(true);
             _this.userservice.loggedInUser = _this.user;
-            // if (this.user.role == "user") {
-            //   this.userservice.isAdmin = false;
-            // }
-            // else if (this.user.role == "admin") {
-            //   this.userservice.isAdmin = true;
             _this.router.navigate(['/admin']);
-            // }
         }, function (err) { return _this.message = "אירעה תקלה. תנסו שוב או הירשמו."; });
     };
     __decorate([
@@ -1080,112 +1100,6 @@ var LoginComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_services_data_service__WEBPACK_IMPORTED_MODULE_4__["DataService"], _services_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"], _services_cart_service__WEBPACK_IMPORTED_MODULE_0__["CartService"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"], _dateFormat_pipe__WEBPACK_IMPORTED_MODULE_1__["DateFormatPipe"]])
     ], LoginComponent);
     return LoginComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/components/user/register/register.component.css":
-/*!*****************************************************************!*\
-  !*** ./src/app/components/user/register/register.component.css ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "#registerform, #registerform2 {\r\n    width: 40%;\r\n    -ms-grid-row-align: center;\r\n        align-self: center;\r\n    background-color: rgb(255,255,255,0.6);\r\n    padding: 10px;\r\n}"
-
-/***/ }),
-
-/***/ "./src/app/components/user/register/register.component.html":
-/*!******************************************************************!*\
-  !*** ./src/app/components/user/register/register.component.html ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div *ngIf=\"screen1\" class=\"container mt-4\" id=\"registerform\">\n    <form novalidate (ngSubmit)=\"onSubmit()\" #f=\"ngForm\">\n      <div class=\"form-group\">\n        <label>Personal ID</label>\n        <input type=\"number\" class=\"form-control\" name=\"tz\" [(ngModel)]=\"tzModel\" required #tz=\"ngModel\" [ngClass]=\"{'is-invalid': tz.invalid && (tz.dirty || tz.touched)}\">\n        <div *ngIf=\"tz.invalid && tz.touched\" class=\"invalid-feedback\">\n          ID field can't be blank\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <label>Username</label>\n        <input type=\"string\" class=\"form-control\" name=\"uname\" [(ngModel)]=\"unameModel\" required #uname=\"ngModel\"\n          [ngClass]=\"{'is-invalid': uname.invalid && uname.touched}\">\n        <div *ngIf=\"uname.invalid && uname.touched\" class=\"invalid-feedback\">\n          Username field can't be blank\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <label>Email</label>\n        <input type=\"email\" class=\"form-control\" name=\"email\" [(ngModel)]=\"emailModel\" required pattern=\"[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}$\"\n          #email=\"ngModel\" [ngClass]=\"{'is-invalid': email.invalid && (email.dirty || email.touched)}\">\n        <div *ngIf=\"email.invalid && email.touched\" class=\"invalid-feedback\">\n          <div *ngIf=\"email.errors?.required\">\n            Email field can't be blank\n          </div>\n          <div *ngIf=\"email.errors?.pattern\">\n            The email must follow this pattern: name@domain.com\n          </div>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <label>Password</label>\n        <input type=\"password\" class=\"form-control\" name=\"pwd\" [(ngModel)]=\"pwdModel\" required #pwd=\"ngModel\" [ngClass]=\"{'is-invalid': pwd.invalid && pwd.touched}\">\n      </div>\n      <div *ngIf=\"pwd.invalid && pwd.touched\" class=\"invalid-feedback\">\n        Password can't be blank\n      </div>\n\n      <div class=\"form-group\">\n        <label>Confirm password</label>\n        <input type=\"password\" class=\"form-control\" name=\"confirm\" [(ngModel)]=\"confirmModel\" required #confirm=\"ngModel\"\n          [ngClass]=\"{'is-invalid': (confirm.invalid && (confirm.dirty || confirm.touched)) || confirmModel!==pwdModel}\">\n      </div>\n      <div *ngIf=\"confirm.invalid && confirm.touched\" class=\"invalid-feedback\">\n        <div *ngIf=\"(confirm.errors?.required && confirm.touched)\">\n          Input password once again\n        </div>\n        <div *ngIf=\"confirmModel!==pwdModel\">\n          Passwords must match!\n        </div>\n      </div>\n      <div>\n        <button type=\"button\" class=\"btn btn-default\" [routerLink]=\"['/login']\">Cancel</button>\n        <button type=\"submit\" [disabled]=\"f.invalid||confirmModel!==pwdModel\" class=\"btn btn-success btn-outline-rounded btn-info\">\n          Next <span style=\"margin-left:10px;\">\n            <fa name=\"arrow-right\"></fa>\n          </span>\n        </button>\n      </div>\n    </form>\n  <div>{{message}}</div>\n</div>\n\n<div *ngIf=\"screen2\" class=\"container mt-4\" id=\"registerform2\">\n  <form novalidate (ngSubmit)=\"register()\" #b=\"ngForm\">\n    <div class=\"form-group\">\n      <label>Name</label>\n      <input type=\"text\" class=\"form-control\" name=\"name\" [(ngModel)]=\"nameModel\" required #name=\"ngModel\" [ngClass]=\"{'is-invalid': name.invalid && (name.dirty || name.touched)}\">\n      <div *ngIf=\"name.invalid && name.touched\" class=\"invalid-feedback\">\n        Name field can't be blank\n      </div>\n    </div>\n\n    <div class=\"form-group\">\n      <label>City</label>\n      <select  class=\"form-control\" name=\"city\" [(ngModel)]=\"cityModel\">\n        <option *ngFor=\"let city of cities\">\n          {{city}}\n        </option>\n      </select>\n    </div>\n\n    <div class=\"form-group\">\n      <label>Street</label>\n      <input type=\"text\" class=\"form-control\" name=\"street\" [(ngModel)]=\"streetModel\" required #street=\"ngModel\"\n        [ngClass]=\"{'is-invalid': street.invalid && street.touched}\">\n      <div *ngIf=\"street.invalid && street.touched\" class=\"invalid-feedback\">\n        Street field can't be blank\n      </div>\n    </div>\n\n    <div>\n      <button type=\"submit\" [disabled]=\"b.invalid || submitted\" class=\"btn btn-success btn-outline-rounded btn-info\">\n        Register\n      </button>\n    </div>\n  </form>\n<div>{{message}}</div>\n</div>\n"
-
-/***/ }),
-
-/***/ "./src/app/components/user/register/register.component.ts":
-/*!****************************************************************!*\
-  !*** ./src/app/components/user/register/register.component.ts ***!
-  \****************************************************************/
-/*! exports provided: RegisterComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterComponent", function() { return RegisterComponent; });
-/* harmony import */ var _models_user__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../../models/user */ "./src/app/models/user.ts");
-/* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../services/user.service */ "./src/app/services/user.service.ts");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var RegisterComponent = /** @class */ (function () {
-    function RegisterComponent(userservice) {
-        this.userservice = userservice;
-        this.screen1 = true;
-        this.screen2 = false;
-        this.cities = [
-            "London",
-            "Hogwarts",
-            "Hogsmeade",
-            "The Burrow",
-            "Godric's Hollow",
-            "Little Hangleton",
-            "Spinner's End",
-            "Forest of Dean"
-        ];
-        this.submitted = false;
-    }
-    RegisterComponent.prototype.onSubmit = function () {
-        var _this = this;
-        //why is it needing a double click??
-        this.userservice.checkUser({ tz: this.tzModel })
-            .subscribe(function (res) {
-            _this.messageCode = res.json();
-        });
-        if (this.messageCode == 1) {
-            alert("Error: a user with such an ID is already registered in the system!");
-            return;
-        }
-        else if (this.messageCode == 2) {
-            this.screen1 = false;
-            this.screen2 = true;
-        }
-    };
-    RegisterComponent.prototype.backToLogin = function () {
-        window.location.replace('/');
-    };
-    RegisterComponent.prototype.register = function () {
-        this.newUser = new _models_user__WEBPACK_IMPORTED_MODULE_0__["User"](this.nameModel, this.emailModel, "user", this.cityModel, this.streetModel, this.unameModel, this.pwdModel, this.tzModel);
-        this.submitted = true;
-        this.userservice.registerUser(this.newUser)
-            .subscribe(function (res) {
-            window.location.replace('/');
-        });
-    };
-    RegisterComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
-            selector: 'app-register',
-            template: __webpack_require__(/*! ./register.component.html */ "./src/app/components/user/register/register.component.html"),
-            styles: [__webpack_require__(/*! ./register.component.css */ "./src/app/components/user/register/register.component.css")]
-        }),
-        __metadata("design:paramtypes", [_services_user_service__WEBPACK_IMPORTED_MODULE_1__["UserService"]])
-    ], RegisterComponent);
-    return RegisterComponent;
 }());
 
 
@@ -1289,34 +1203,6 @@ var product = /** @class */ (function () {
         this.quantity = quantity;
     }
     return product;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/models/user.ts":
-/*!********************************!*\
-  !*** ./src/app/models/user.ts ***!
-  \********************************/
-/*! exports provided: User */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "User", function() { return User; });
-var User = /** @class */ (function () {
-    function User(name, email, role, city, street, username, password, tz) {
-        this.name = name;
-        this.email = email;
-        this.role = role;
-        this.city = city;
-        this.street = street;
-        this.username = username;
-        this.password = password;
-        this.tz = tz;
-    }
-    return User;
 }());
 
 
@@ -1583,7 +1469,7 @@ var OrderService = /** @class */ (function () {
         var _this = this;
         this.http = http;
         this.timeInSeconds = 10;
-        this.orders = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](null);
+        this.orders = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
         setInterval(function () {
             _this.fetchOrders();
         }, this.timeInSeconds * 1000);
@@ -1646,7 +1532,6 @@ var UserService = /** @class */ (function () {
         get: function () {
             return sessionStorage.getItem('name');
         },
-        // isAdmin:boolean = false;
         set: function (value) {
             this.username.next(value);
             sessionStorage.setItem('name', value);
@@ -1663,18 +1548,11 @@ var UserService = /** @class */ (function () {
     UserService.prototype.sendUser = function (userData) {
         return this.http.post('/user', userData);
     };
-    UserService.prototype.checkUser = function (tz) {
-        return this.http.post('/checkexist', tz);
-    };
-    UserService.prototype.registerUser = function (userData) {
-        return this.http.post('/newuser', userData);
-    };
     UserService.prototype.getUsers = function () {
         return this.http.get('/users');
     };
     UserService.prototype.logOut = function () {
         this.isLoggedIn.next(false);
-        // this.isAdmin = false;
         this.loggedInUser = null;
         sessionStorage.clear();
         return this.http.post('/logout', null);

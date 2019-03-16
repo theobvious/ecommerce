@@ -1,5 +1,7 @@
+import { ServerResponse } from './../../models/serverResponse';
 import { OrderService } from './../../services/order.service';
 import { Component, OnInit } from '@angular/core';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-admin',
@@ -17,13 +19,12 @@ export class AdminComponent implements OnInit {
 
   getorders() {
     this.getdata.getOrders()
-      .subscribe (res => {
-        this.orders = res;
-        this.orders = Array.of(this.orders);
-        console.log(this.orders);
-      });
+      .subscribe(data => {
+         if (data.json) {
+          this.orders = data.json();
+        }
+      })
   }
 
   
-
 }

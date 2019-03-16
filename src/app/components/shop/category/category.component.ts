@@ -33,7 +33,14 @@ export class CategoryComponent implements OnInit {
       });
   }
 
+  checkQuantity(product : product) {
+    if (product.quantity >= 1) {
+      this.addToCart(product);
+    } else alert("יש לבחור כמות");
+  }
+
   addToCart(product : product) {
     this.cartService.addProduct(product);
+    alert("נוסף בהצלחה!");
 }
 }

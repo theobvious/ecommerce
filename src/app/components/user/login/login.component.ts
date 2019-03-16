@@ -42,13 +42,7 @@ export class LoginComponent implements OnInit {
           this.userservice.isLoggedIn.next(true);
           this.userservice.loggedInUser = this.user;
 
-          // if (this.user.role == "user") {
-          //   this.userservice.isAdmin = false;
-          // }
-          // else if (this.user.role == "admin") {
-          //   this.userservice.isAdmin = true;
-            this.router.navigate(['/admin']);
-         // }
+          this.router.navigate(['/admin']);
         },
         err=> this.message="אירעה תקלה. תנסו שוב או הירשמו."
     )

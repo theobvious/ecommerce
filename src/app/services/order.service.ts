@@ -1,3 +1,4 @@
+import { ServerResponse } from './../models/serverResponse';
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { BehaviorSubject, Observable } from 'rxjs';
@@ -10,7 +11,8 @@ export class OrderService {
   public timeInSeconds = 10;
 
   constructor(private http: Http) { 
-    this.orders = new BehaviorSubject<any>(null);
+    this.orders = new BehaviorSubject<any>([]);
+   
     setInterval(() => {
       this.fetchOrders();
     }, this.timeInSeconds * 1000);
