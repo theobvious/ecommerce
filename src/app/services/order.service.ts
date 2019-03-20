@@ -1,4 +1,3 @@
-import { ServerResponse } from './../models/serverResponse';
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { BehaviorSubject, Observable } from 'rxjs';

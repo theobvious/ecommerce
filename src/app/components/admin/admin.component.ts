@@ -1,4 +1,3 @@
-import { ServerResponse } from './../../models/serverResponse';
 import { OrderService } from './../../services/order.service';
 import { Component, OnInit } from '@angular/core';
 import 'rxjs/add/operator/map';
